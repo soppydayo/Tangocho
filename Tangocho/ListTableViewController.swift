@@ -52,6 +52,11 @@ class ListTableViewController: UITableViewController {
         return cell
     }
     
+    @IBAction func clearButton() {
+        
+    }
+
+    
     
     
     

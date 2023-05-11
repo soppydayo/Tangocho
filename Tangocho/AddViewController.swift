@@ -14,7 +14,7 @@ class AddViewController: UIViewController {
     
     var wordArray: [Dictionary<String, String>] = []
     let saveData = UserDefaults.standard
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if saveData.array(forKey: "WORD") != nil {
@@ -23,7 +23,7 @@ class AddViewController: UIViewController {
     }
     
     @IBAction func saveWord(){
-        let wordDictionary = ["english": englishTextField.text!, "japanese":japaneseTextField.text!]
+        let wordDictionary = ["english": englishTextField.text!, "japanese": japaneseTextField.text!]
         wordArray.append(wordDictionary)
         saveData.set(wordArray, forKey: "WORD")
         
@@ -42,15 +42,18 @@ class AddViewController: UIViewController {
         japaneseTextField.text = ""
     }
     
-
+    
+    
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
